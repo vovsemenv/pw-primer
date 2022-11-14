@@ -18,12 +18,13 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe("New Todo", () => {
-  test("should allow me to add todo items", async ({ page },testInfo) => {
+  test("should allow me to add todo items", async ({ page }, testInfo) => {
     allure.description("This Test make shure that you can add todo items");
     allure.issue({
       url: "https://github.com/allure-framework/allure-js/pull/408",
       name: "github issue",
     });
+    allure.id("228");
 
     await testInfo.attach("TODO_ITEMS", {
       body: JSON.stringify(TODO_ITEMS),
